@@ -1,0 +1,10 @@
+FROM arm32v7/alpine:3.16
+
+RUN addgroup -g 1000 node \
+  && adduser -u 1000 -G node -s /bin/sh -D node \
+  && apk add --update --no-cache nodejs npm \
+  && node --version \
+  && npm --version
+
+CMD [ "node" ]
+

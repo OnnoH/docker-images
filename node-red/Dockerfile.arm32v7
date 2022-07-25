@@ -1,0 +1,6 @@
+FROM arm32v7/node:16.16.0
+
+RUN npm install -g --unsafe-perm node-red \
+    && node-red --help
+
+CMD [ "node-red" ]
